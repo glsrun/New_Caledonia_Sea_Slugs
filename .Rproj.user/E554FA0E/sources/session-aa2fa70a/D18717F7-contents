@@ -1,6 +1,5 @@
 project:
   type: website
-  output-dir: docs
 website:
   title: "New_Caledonia_Sea_Slugs.github.io"
   navbar:

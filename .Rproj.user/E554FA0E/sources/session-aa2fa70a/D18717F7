@@ -3,7 +3,7 @@
     "path": "E:/CPP Grad Thesis/Nouvelle-Calédonie-slugs/New_Caledonia_Sea_Slugs.github.io/_quarto.yml",
     "project_path": "_quarto.yml",
     "type": "yaml",
-    "hash": "622957217",
+    "hash": "3464989085",
     "contents": "",
     "dirty": false,
     "created": 1745141797680.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "19,0",
+        "cursorPosition": "1,15",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1745142076,
+    "lastKnownWriteTime": 1745179412,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1745142076623,
+    "last_content_update": 1745179412624,
     "read_only": false,
     "read_only_alternatives": []
 }
