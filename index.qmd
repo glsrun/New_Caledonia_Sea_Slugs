@@ -2,12 +2,11 @@
 title: "New_Caledonia_Sea_Slugs.github.io"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Welcome to this project that will keep track of all of the sea slugs found on various expiditions to New Caledonia!
 
 ```{r}
-1 + 1
+library(tidyverse)
+library(tidyr)
 ```
 
 git remote add origin htttps://github.com/glsrun/New_Caledonia_Sea_Slugs.git
