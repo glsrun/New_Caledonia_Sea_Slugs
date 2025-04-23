@@ -1,9 +1,46 @@
 ---
-title: "About"
+title: "Ouvea data"
 ---
 
 About this site
 
 ```{r}
-1 + 1
+library(googlesheets4)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(quarto)
+
+sheet_url <- "https://docs.google.com/spreadsheets/d/1J1mNN9AuM_pgOjtTf5w8CjcYtxe4E1Bx4cveOU6slIU"
+sheets <- sheet_names(sheet_url)
+
+all_data <- lapply(sheets, function(sheet) {
+  read_sheet(sheet_url, sheet = sheet) |>  mutate(date_sheet = sheet)
+}) |>  bind_rows()
+
+all_data <- all_data |> 
+  mutate(date_collected = as.Date(date))
+
+specimens_per_day <- all_data |>  count(date_collected)
+species_per_day <- all_data |> 
+  group_by(date_collected) |> 
+  summarise(unique_species = n_distinct(genus_species))
+
+all_data <- all_data |>  arrange(date_collected)
+all_data <- all_data |>  mutate(new_species = !duplicated(genus_species))
+new_species_daily <- all_data |> 
+  group_by(date_collected) |> 
+  summarise(new_species = sum(new_species))
+
+ggplot(specimens_per_day, aes(x = date_collected, y = n)) +
+  geom_col() +
+  labs(title = "Specimens Collected Per Day")
+
+ggplot(species_per_day, aes(x = date_collected, y = unique_species)) +
+  geom_col(fill = "steelblue") +
+  labs(title = "Species Per Day")
+
+ggplot(new_species_daily, aes(x = date_collected, y = new_species)) +
+  geom_line(color = "darkgreen") +
+  labs(title = "New Species Per Day")
 ```
