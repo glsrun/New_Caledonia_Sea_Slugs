@@ -2,7 +2,7 @@
 title: "New_Caledonia_Sea_Slugs.github.io"
 ---
 
-Welcome to this project that will keep track of all of the sea slugs found on various expeditions to New Caledonia! In this project all of the sea slugs will be live updated as they are input into the raw data sheet and real time analysis will be displayed here
+Welcome to this project that will keep track of all of the sea slugs found on various expeditions to New Caledonia! In this project all of the sea slugs will be live updated as they are input into the raw data sheet and real time analysis will be displayed here!
 
 ```{r}
 library(tidyverse)
